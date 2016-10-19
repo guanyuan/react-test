@@ -11,9 +11,14 @@ var config = {
   },
   module: {
     loaders: [
-      // telling webpack which loaders we want to use.  For now just run the
-      // code through the babel-loader.  'babel' is an alias for babel-loader
-      { test: /\.js$/, loaders: ['babel'], exclude: /node_modules/ }
+      {
+        test: /\.js$/,
+        loaders: ['babel'],
+        exclude: /node_modules/,
+        query: {
+          presets: ['react', 'es2015']
+        }
+      }
     ]
   }
 }
