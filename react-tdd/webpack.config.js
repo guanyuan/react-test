@@ -30,10 +30,7 @@ var config = {
         exclude: /(node_modules|bower_components)/,
         // babel is alias for babel-loader
         // npm i babel-core babel-loader --save-dev
-        loader: 'babel',
-        query: {
-          presets: ['react', 'es2015']
-        }
+        loader: 'babel'
       }
     ],
   }
