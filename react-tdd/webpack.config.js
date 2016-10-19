@@ -4,7 +4,11 @@ var webpack = require('webpack');
 var path = require('path');                // a useful node path helper library
 
 var config = {
-  entry: ['./src/main.js'],                // the entry point for our app
+  entry: [
+    'webpack/hot/dev-server',
+    'webpack-dev-server/client?http://localhost:3000',
+    './src/main.js'
+  ],
   output: {
     path: path.resolve(__dirname, 'dist'), // store the bundled output in dist/bundle.js
     filename: 'bundle.js'                  // specifying file name for our compiled assets
